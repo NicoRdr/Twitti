@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wildapp</title>
+  <title>Wilder</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<% if user_signed_in? %> Connecté en tant que <%= current_user.email %> Ce n'est pas vous?         
+<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>     
+<% else %>  
+
+<%= link_to "Sign Up", new_user_registration_path %> 
+or 
+<%= link_to "sign in", new_user_session_path  %>    
+<% end %> 
+
+</div> <% flash.each do |name, msg| %> <%= content_tag :div, msg, :id => "flash_#{name}" %> <% end %>
+
+</div> 
+
+<%flash.each do |name, msg| %>
+
+<%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %> 
+
 
 <%= yield %>
 
