@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
 before_filter :authenticate_user!
-	def index    
+	def index 
+		@messages = Message.all   
 	end
 end
