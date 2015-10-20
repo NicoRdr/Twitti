@@ -1,0 +1,116 @@
+<!-- wall booststrap, a comprendre ou à virer -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+          <title>WildWall</title>
+          <!-- Bootstrap Core CSS
+          -->
+          <link href="/static/css/bootstrap-3.2.0.min.css" rel="stylesheet">
+            <!-- Custom CSS
+            -->
+            <link href="/static/css/wall.css" rel="stylesheet">
+              <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+              -->
+              <!--[if lt IE 9]
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+              -->
+            </link>
+          </link>
+        </meta>
+      </meta>
+    </meta>
+  </head>
+  <body>
+    <!-- Page Content
+    -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 page-header">
+          <h1>
+            <span></span>
+            WildWall
+          </h1>
+          <p class="lead"> Bienvenue sur votre WildWall! </p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="glyphicon glyphicon-pencil"></span>
+                Ecrire message
+              </h3>
+            </div>
+            <div class="panel-body">
+              <form id="message-form" role="form">
+                <div class="form-group">
+                  <textarea class="form-control" id="message" name="m" placeholder="Ecrire message"></textarea>
+                </div>
+                <button class="btn btn-primary" id="message-send" type="submit">
+                  envoyer
+                </button>
+                <button class="btn btn-info" id="message-reset" type="button">
+                  effacer
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="glyphicon glyphicon-list-alt"></span>
+                Messages
+              </h3>
+            </div>
+            <div class="panel-body">
+
+            	<!-- ruby pour afficher tous les messages de tous les utilisateurs, ordre decroissant -->
+
+              <% @messages.reverse.each do |message| %>
+  							<p>
+    							<%= message.content %>
+  							</p>
+  							<p>
+    							<%= message.user.name %>
+  							</p>
+  						<% end %>
+
+  						<!-- fin ruby -->
+
+  						<!-- liste html des messages pour remplacer le ruby si besoin
+
+  						<li class="list-group-item"> message #1</li>
+              <li class="list-group-item"> message #2</li>
+            	<li class="list-group-item"> message #3</li>
+            	<li class="list-group-item"> message #4</li>
+            	<li class="list-group-item"> message #5</li>
+            	<li class="list-group-item"> message #6</li>
+
+            	fin de la liste -->
+
+						
+            </div>
+          </div>
+        </div>
+        <!--.row
+        -->
+      </div>
+    </div>
+    <!-- /.container
+    -->
+    <script src="/static/js/jquery-1.11.0.min.js"></script>
+    <!-- jQuery v1.11.0
+    -->
+    <script src="/static/js/bootstrap-3.2.0.min.js"></script>
+    <!-- Bootstrap's JS
+    -->
+    <script src="/static/js/wall.js"></script>
+    <!-- Message Wall JS
+    -->
+  </body>
+</html>

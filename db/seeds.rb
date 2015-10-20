@@ -5,3 +5,59 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+#Utilisateur créé
+User.create([{ name: 'phhaffner',
+							email: 'phhaffner@gmail.com',
+							nickname:'ph',
+							password: 'azerty1234' }])
+							
+User.create([{ name: 'nicolas' ,
+							nickname: 'nico',
+							email: 'admin@gmail.com',
+            password: 'azerty1234' }])
+           
+
+User.create([{ name: 'eric',
+							nickname: 'riquet',
+							email: 'admin@hotmail.fr',
+            	password: 'azerty1234' }])
+
+#Message crée
+Message.create([{ user_id: '1',
+							content: 'Hello'}])
+
+Message.create([{ user_id: '1',
+							content: 'Hello 2'}])
+
+Message.create([{ user_id: '1',
+							content: 'Hello 3'}])
+
+Message.create([{ user_id: '1',
+							content: 'Hello 4'}])
+
+Message.create([{ user_id: '2',
+							content: 'Hello'}])
+
+Message.create([{ user_id: '2',
+							content: 'Hello 2'}])
+
+Message.create([{ user_id: '2',
+							content: 'Hello 3'}])
+
+Message.create([{ user_id: '2',
+							content: 'Hello 4'}])
+
+Message.create([{ user_id: '3',
+							content: 'Hello'}])
+
+Message.create([{ user_id: '3',
+							content: 'Hello 2'}])
+
+Message.create([{ user_id: '3',
+							content: 'Hello 3'}])
+
+Message.create([{ user_id: '3',
+							content: 'Hello 4'}])
+
+
