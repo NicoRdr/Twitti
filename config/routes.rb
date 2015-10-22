@@ -4,7 +4,18 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'messages#index' # affichage de tout les messages
+  root 'messages#index' # affichage de tout les messages
+  get "/messages" => 'messages#index'
+  # get "/messages/:id/posts" => 'posts#blogposts', as: :messageshowposts
+  # get "/posts/:id" => 'posts#show', as: :postshow
+  # get "/messages/new" => 'messages#new'
+  post '/messages' => 'messages#create'
+  # get "/messages/:id" => 'messages#show', as: :blog_show
+  # get "/messages/:id/posts/new" => 'posts#new', as: :post_new
+  # post "/posts" => 'posts#create'
+  # get '/posts/:id/edit' => 'posts#edit', as: :post_edit
+  # resources :posts
+
 
 
   # Example of regular route:

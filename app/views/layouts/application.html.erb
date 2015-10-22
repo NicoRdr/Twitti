@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stytesheet" href="assets/application.css">
 
 
 
@@ -49,7 +50,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Profil <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="#"> profil <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Message</a></li>
         
       </ul>
@@ -62,11 +63,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"> <%= current_user.email %> </a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Parametre <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">chepa</a></li>
-            <li><a href="#">Paramètres</a></li>
-            <li><a href="#">chepa</a></li>
+            <li><a href="#">(=^_^=)</a></li>
+            <li><a href="#">(=^_^=)</a></li>
+            <li><a href="#">(=^_^=)</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#"> <%= link_to "Deconnection", destroy_user_session_path, :method => :delete %></a></li>
           </ul>
@@ -86,10 +87,15 @@
 -->   
 
 <% else %>  
-	<%= link_to "Connection", new_user_registration_path %> 
+
+	<div class="top-bar">  
+ <%= link_to "Nouvel utilisateur", new_user_registration_path %> 
 	ou 
-	<%= link_to "Nouvel utilisateur", new_user_session_path  %>    
+	<%= link_to "Connection", new_user_session_path  %>    
+  </div>
+
 <% end %>
+
 
 </div> 
 	<% flash.each do |name, msg| %> <%= content_tag :div, msg, :id => "flash_#{name}" %> 
