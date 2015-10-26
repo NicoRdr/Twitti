@@ -15,6 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 /*.login {
 	color: black	;
 	background-color: blue;
@@ -28,20 +29,18 @@
  */
 body, html
  {
+    background-color: #e2f894;
+
+}
+
+body#devise, html
+ {
     height: 100%;
     background-repeat: repeat-y;
     background-image: url("promo2.jpg");
     background-size: center;
     background-attachment: fixed;
-
-
-}
-
-/* body message */
-.message
-{
-	background-color: #e2f894;
-    /*z-index: 10;*/
+    font-family: 
 
 }
 
@@ -63,7 +62,10 @@ body, html
 /* bar pour connexion/ nouveau utilisateur */
 .top-bar
 {
-	background-color: #e2f894;
+    margin-top: -8px;
+    font-size: 18px;
+    background-color: #F4F4F4;
+    color: black;
 }
 
 .btn 

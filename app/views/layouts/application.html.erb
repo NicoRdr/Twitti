@@ -12,6 +12,7 @@
 
 
 
+
 <title>Wilder</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -66,8 +67,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Parametre <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">(=^_^=)</a></li>
-            <li><a href="#">(=^_^=)</a></li>
-            <li><a href="#">(=^_^=)</a></li>
+            <li><a href="#">( ಠ益ಠ)</a></li>
+            <li><a href="#">\(º O º)/</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#"> <%= link_to "Deconnection", destroy_user_session_path, :method => :delete %></a></li>
           </ul>
@@ -86,13 +87,6 @@
 
 -->   
 
-<% else %>  
-
-	<div class="top-bar">  
- <%= link_to "Nouvel utilisateur", new_user_registration_path %> 
-	ou 
-	<%= link_to "Connection", new_user_session_path  %>    
-  </div>
 
 <% end %>
 

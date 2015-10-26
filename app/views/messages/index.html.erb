@@ -32,7 +32,7 @@
         <div class="col-xs-12 page-header">
           <h1>
             <span></span>
-            WildWall
+            Wilder
           </h1>
           <p class="lead"> Bienvenue sur votre WildWall! </p>
         </div>
@@ -42,7 +42,6 @@
                 <div class="profile-header-img">
                 <img class="img-circle" src="images/logo.jpg" />
                 <div class="rank-label-container">
-                    <span class="label label-default rank-label">100 puntos</span>
                 </div>
             </div>
         </div> 
@@ -53,7 +52,7 @@
               <%= f.submit "Envoyer", {:method => :post } %>
 
   
-<% end %>
+            <% end %>
             </div>
           </div>
         </div>
@@ -61,13 +60,14 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
-                <span class="glyphicon glyphicon-list-alt"></span>
-                Messages
+                <!-- <span class="glyphicon glyphicon-list-alt"></span> -->
+                @Wilds
               </h3>
             </div>
             <div class="panel-body">
 
-            	<!-- ruby pour afficher tous les messages de tous les utilisateurs, ordre decroissant -->
+            	<!-- messages de tous les utilisateurs, ordre decroissant -->
+
               <%= paginate @messages %>
 
               <% @messages.each do |message| %>
@@ -84,19 +84,6 @@
   						<% end %>
 
               <%= paginate @messages %>
-
-  						<!-- fin ruby -->
-
-  						<!-- liste html des messages pour remplacer le ruby si besoin
-
-  						<li class="list-group-item"> message #1</li>
-              <li class="list-group-item"> message #2</li>
-            	<li class="list-group-item"> message #3</li>
-            	<li class="list-group-item"> message #4</li>
-            	<li class="list-group-item"> message #5</li>
-            	<li class="list-group-item"> message #6</li>
-
-            	fin de la liste -->
 
 						
             </div>
