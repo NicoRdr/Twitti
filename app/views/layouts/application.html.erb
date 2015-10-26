@@ -91,22 +91,13 @@
 <% end %>
 
 
-</div> 
-	<% flash.each do |name, msg| %> <%= content_tag :div, msg, :id => "flash_#{name}" %> 
-	<% end %>
-</div>
-
-	<%flash.each do |name, msg| %>
-	<%= content_tag :div, msg, :id => "flash_#{name}" %>
-
-
-<% end %>
-
-
-
-
+<%= render 'layouts/messages' %>
 
 <%= yield %>
+
+<script type="text/javascript">
+  $('.alert').delay(5000).fadeOut();
+</script>
 
 </body>
 </html>
