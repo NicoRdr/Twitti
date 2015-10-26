@@ -44,6 +44,19 @@ body#devise, html
 
 }
 
+/* Image */
+img {
+ height: 85px;
+ height: 85px;
+}
+
+/* paragraphe */
+
+h2
+{
+    text-align: center;
+}
+
 .card-container.card
  {
     width: 350px;
@@ -304,8 +317,4 @@ text-align: right;
 color: #777;
 font-size: 12px;
 line-height: 22px;
-}
-img {
- min-height: 40px;
- max-height: 40px;
 }
