@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Wilder</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body id="devise">
+
+		<div class="top-bar">  
+ 			<%= link_to "Nouvel utilisateur", new_user_registration_path %> 
+				ou 
+			<%= link_to "Connection", new_user_session_path  %>    
+  	</div>
+
+    <%= yield %>
+  </body>
+</html>
