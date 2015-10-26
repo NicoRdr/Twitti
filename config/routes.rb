@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'profil/index'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   # get "/posts/:id" => 'posts#show', as: :postshow
   # get "/messages/new" => 'messages#new'
   post '/messages' => 'messages#create'
+  get '/profil' => 'profil#index'
   # get "/messages/:id" => 'messages#show', as: :blog_show
   # get "/messages/:id/posts/new" => 'posts#new', as: :post_new
   # post "/posts" => 'posts#create'
