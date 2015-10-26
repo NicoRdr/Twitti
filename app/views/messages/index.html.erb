@@ -57,35 +57,50 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-8">
+          
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">
-                <!-- <span class="glyphicon glyphicon-list-alt"></span> -->
-                @Wilds
+                <span class="glyphicon glyphicon-list-alt"></span>
+                Messages
               </h3>
+               <p><%= paginate @messages %></p>
             </div>
-            <div class="panel-body">
+          </div>
 
-            	<!-- messages de tous les utilisateurs, ordre decroissant -->
+          <!-- Fil des Messages -->
+          <% @messages.each do |message| %>
+          <div class="message-item">
+            <div class="message-inner">
+              <div class="message-head clearfix">
+                <div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=Oleg+Kolesnichenko"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
+                <div class="user-detail">
+                  <h5 class="handle"><%= message.user.name %></h5>
+                  <div class="post-meta">
+                    <div class="asker-meta">
+                      <span class="qa-message-what"></span>
+                      <span class="qa-message-when">
+                        <span class="qa-message-when-data"><%= message.created_at %></span>
+                      </span>
+                      <span class="qa-message-who">
+                        <span class="qa-message-who-pad">by </span>
+                        <span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=Oleg+Kolesnichenko"><%= message.user.name %></a></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="qa-message-content">
+                <%= message.content %>
+              </div>
+            </div>
+          </div>
+          <% end %>
 
-              <%= paginate @messages %>
-
-              <% @messages.each do |message| %>
-  						  
-                  <p style="color: red;">
-                  <%= message.user.name %>
-                  <%= message.created_at %> 
-                  </p>	
-
-                <p style="color: blue;">
-    							<%= message.content %>
-  							</p>
-  						<hr />
-  						<% end %>
-
-              <%= paginate @messages %>
-
-						
+          <div class="well">
+            <%= paginate @messages %>  
+          </div>
+          
             </div>
           </div>
         </div>
