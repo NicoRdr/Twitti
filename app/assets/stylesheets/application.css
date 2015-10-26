@@ -36,12 +36,25 @@ body, html
 body#devise, html
  {
     height: 100%;
-    background-repeat: repeat-y;
+    
     background-image: url("promo2.jpg");
-    background-size: center;
+    background-size: cover;
     background-attachment: fixed;
     font-family: 
 
+}
+
+/* Image */
+img {
+ height: 85px;
+ height: 85px;
+}
+
+/* paragraphe */
+
+h2
+{
+    text-align: center;
 }
 
 .card-container.card
@@ -304,8 +317,4 @@ text-align: right;
 color: #777;
 font-size: 12px;
 line-height: 22px;
-}
-img {
- min-height: 40px;
- max-height: 40px;
 }
