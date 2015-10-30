@@ -1,4 +1,5 @@
-/log/
+/log
+/db/*.sqlite3
 *.gem
 *.rbc
 /.config
