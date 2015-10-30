@@ -76,6 +76,9 @@
                 <div class="avatar pull-left"><a href="./index.php?qa=user&qa_1=Oleg+Kolesnichenko"><img src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"></a></div>
                 <div class="user-detail">
                   <h5 class="handle"><%= message.user.name %></h5>
+                  <% unless message.user.followers.include?(current_user) %>
+                  <%= link_to "follow", follow_profil_path(message.user.id) %>
+                  <% end %>
                   <div class="post-meta">
                     <div class="asker-meta">
                       <span class="qa-message-what"></span>
@@ -84,7 +87,7 @@
                       </span>
                       <span class="qa-message-who">
                         <span class="qa-message-who-pad">by </span>
-                        <span class="qa-message-who-data"><a href="./index.php?qa=user&qa_1=Oleg+Kolesnichenko"><%= message.user.name %></a></span>
+                        <span class="qa-message-who-data"><%= link_to message.user.name, show_profil_path(message.user.id) %></span>
                       </span>
                     </div>
                   </div>
