@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   # get "/messages/new" => 'messages#new'
   post '/messages' => 'messages#create'
   get '/profil' => 'profil#index'
+  get '/profil/:id' => 'profil#show', as: :show_profil
+  get '/profil/:id/follow' => 'profil#follow', as: :follow_profil
+
   # get "/messages/:id" => 'messages#show', as: :blog_show
   # get "/messages/:id/posts/new" => 'posts#new', as: :post_new
   # post "/posts" => 'posts#create'
