@@ -28,17 +28,16 @@ class MessagesController < ApplicationController
   end
   
   def edit
-    
   end
+
+  def followall
+    @newmessage = Message.new
+
+    followers_ids = current_user.followers.map { |user| user.id }
+    @messages = Message.where(user_id: followers_ids).order('created_at DESC').page(params[:page])
+    
   
-  #def update
-    #if post_params[:title] != nil && post_params[:author] != nil && post_params[:content] != nil
-      #Post.find(params[:id]).update(post_params)
-      #redirect_to postshow_path(Post.find(params[:id]))
-    #else
-     # render :edit
-    #end
-  #end
+  end
 
   private
   def message_params
