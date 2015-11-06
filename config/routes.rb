@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/profil' => 'profil#index'
   get '/profil/:id' => 'profil#show', as: :show_profil
   get '/profil/:id/follow' => 'profil#follow', as: :follow_profil
+  get '/followall' => 'messages#followall'
+  # get '/profil/:id/unfollow' => 'profil#unfollow', as: :unfollow_profil
 
   # get "/messages/:id" => 'messages#show', as: :blog_show
   # get "/messages/:id/posts/new" => 'posts#new', as: :post_new
