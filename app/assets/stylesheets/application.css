@@ -29,7 +29,7 @@
  */
 body, html
  {
-    background-color: #e2f894;
+    background-color: ;
 
 }
 
@@ -37,10 +37,10 @@ body#devise, html
  {
     height: 100%;
     
-    background-image: url("promo2.jpg");
+    background-image: url("piou.jpg");
     background-size: cover;
     background-attachment: fixed;
-    font-family: 
+    font-family: ;
 
 }
 
@@ -61,7 +61,7 @@ h2
  {
     width: 350px;
     padding: 40px 40px;
-    background-color: #e2f894;
+    background-color: rgba(255, 255, 255, 0);
 }
 /* mot de passe oublier  */
 
