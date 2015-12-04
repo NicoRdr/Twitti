@@ -36,7 +36,7 @@ body#devise, html
  {
     height: 100%;
     
-    background-image: url("piou.png");
+    background-image: url("piou_1.png");
     background-size: cover;
     background-attachment: fixed;
  }
@@ -61,10 +61,12 @@ h2
 
 .card-container.card
  {
-    margin-top: 150px;
+    margin-top: 230px;
+    margin-left: 450px;
     width: 350px;
     padding: 40px 40px;
     background-color: rgba(255, 255, 255, 0.4);
+    position: fixed;
 }
 
 /* mot de passe oublier
@@ -333,4 +335,10 @@ line-height: 22px;
     position: absolute;
     right: 5px;
     top: 5px;
+}
+/* Center text
+**************/
+.connect, .inscrit
+{
+    text-align: center;
 }
