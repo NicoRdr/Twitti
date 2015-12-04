@@ -6,14 +6,15 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body id="devise">
+<body id="devise">
 
-		<div class="top-bar">  
- 			<%= link_to "Nouvel utilisateur", new_user_registration_path %> 
-				ou 
-			<%= link_to "Connection", new_user_session_path  %>    
-  	</div>
+	<div id="button_connect">
+	 <%= link_to "New User", new_user_registration_path, class: "btn btn-default" %> 
+				
+	 <%= link_to "Connection", new_user_session_path, class: "btn btn-default" %>    
+  </div>
 
-    <%= yield %>
-  </body>
+  <%= yield %>
+
+</body>
 </html>

@@ -2,16 +2,22 @@
 
 <h2 class="text-center">Inscription</h2>
 
+<div class="inscrit">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div id="profile-img" class="profile-img-card" >
+ <!--  <div id="profile-img" class="profile-img-card" >
                 <%= image_tag("logo.jpg" )%>
+  </div>-->
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :autofocus => true %>
   </div>
 
   <div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name, :autofocus => true %>
+    <%= f.label :prenom%><br />
+    <%= f.text_field :prenom, :autofocus => true %>
   </div>
   
   <div class="field">
@@ -35,7 +41,9 @@
   <div class="actions">
     <%= f.submit "GoWild" %>
   </div>
+
 <% end %>
 
 <%= render "devise/shared/links" %>
-</div>
+</div><!--class pour centrer -->
+</div><!-- class card container-->

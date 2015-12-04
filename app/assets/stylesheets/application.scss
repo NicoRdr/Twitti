@@ -29,41 +29,46 @@
  */
 body, html
  {
-    background-color: ;
-
+   
 }
 
 body#devise, html
  {
     height: 100%;
     
-    background-image: url("piou.jpg");
+    background-image: url("piou.png");
     background-size: cover;
     background-attachment: fixed;
-    font-family: ;
+ }
 
-}
-
-/* Image */
+/* Image
+***********/
 img {
  height: 85px;
  height: 85px;
 }
 
-/* paragraphe */
+/* paragraphe
+**************/
 
 h2
 {
     text-align: center;
 }
 
+/*Container pour connection 
+***************************/
+
 .card-container.card
  {
+    margin-top: 150px;
     width: 350px;
     padding: 40px 40px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.4);
 }
-/* mot de passe oublier  */
+
+/* mot de passe oublier
+************************/
 
 .mdp-oublie
  {
@@ -72,8 +77,8 @@ h2
 
 }
 
-/* bar pour connexion/ nouveau utilisateur */
-.top-bar
+/* bar de connexion/ nouveau utilisateur */
+/*.top-bar
 {
     margin-top: -8px;
     font-size: 18px;
@@ -90,7 +95,7 @@ h2
     user-select: none;
     cursor: default;
 }
-
+*/
 /*
  * Card component
  */
@@ -123,9 +128,8 @@ h2
 
 }
 
-/*
- * Form styles
- */
+/*Form styles
+***************/
 .profile-name-card {
     font-size: 16px;
     font-weight: bold;
@@ -212,7 +216,8 @@ h2
 }
 
 
-/*  Fil_Posts */
+/*Fil_Posts 
+***************/
 .message-item {
 margin-bottom: 25px;
 margin-left: 40px;
@@ -317,4 +322,15 @@ text-align: right;
 color: #777;
 font-size: 12px;
 line-height: 22px;
+}
+/*Mon css
+**************/
+
+/*button connection
+*******************/
+#button_connect
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
