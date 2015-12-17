@@ -14,19 +14,17 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#gem pry for binding pry
 gem 'pry'
-
+#gem rspec for test the application
+gem 'rspec'
+#gem haml for edit texte 
+gem 'haml'
+#gem devise for application
 gem 'devise'
 
-gem 'haml'
-
-gem 'bootstrap-sass', '~> 3.3.1'
-
-gem 'autoprefixer-rails'
-
-gem 'kaminari'
-
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+#gem Boostrap for css 
+gem 'bootstrap-sass', '~> 3.3.5'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

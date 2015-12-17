@@ -1,30 +1,18 @@
 Rails.application.routes.draw do
-  get 'profil/index'
 
-  devise_for :users
+  #Define Root Url
+  root 'pages#index'
+
+  #Define Routes for Pages
+  get '/home' => 'pages#home'#override defaut routes
+  get '/profile' => 'pages#profile'
+  get '/explore' => 'pages#explore'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'messages#index' # affichage de tout les messages
-  get "/messages" => 'messages#index'
-  # get "/messages/:id/posts" => 'posts#blogposts', as: :messageshowposts
-  # get "/posts/:id" => 'posts#show', as: :postshow
-  # get "/messages/new" => 'messages#new'
-  post '/messages' => 'messages#create'
-  get '/profil' => 'profil#index'
-  get '/profil/:id' => 'profil#show', as: :show_profil
-  get '/profil/:id/follow' => 'profil#follow', as: :follow_profil
-  get '/followall' => 'messages#followall'
-  # get '/profil/:id/unfollow' => 'profil#unfollow', as: :unfollow_profil
-
-  # get "/messages/:id" => 'messages#show', as: :blog_show
-  # get "/messages/:id/posts/new" => 'posts#new', as: :post_new
-  # post "/posts" => 'posts#create'
-  # get '/posts/:id/edit' => 'posts#edit', as: :post_edit
-  # resources :posts
-
-
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
